@@ -1,0 +1,1 @@
+describe("translate - strToMorse", function() {});

@@ -1,4 +1,4 @@
-import { ImapMorseToChar, mapMorseToChar } from './translateMap';
+import { ImapMorseToChar, mapMorseToChar } from './translateMap.js';
 
 export function morseToStr(str: string) {
   if (str === '') {
@@ -9,7 +9,13 @@ export function morseToStr(str: string) {
     return '';
   }
 
-  const morseWords = str.trim().split('/');
+  const morseWords = str.trim().match(/[^/]+/g);
+
+  console.log(morseWords);
+
+  if (!morseWords) {
+    return '';
+  }
 
   const words = morseWords.map((morseWord) => {
     const morseChars = morseWord.trim().split(/\s+/);

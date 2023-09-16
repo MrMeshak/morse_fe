@@ -1,0 +1,6 @@
+@use '../abstracts';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: abstracts.$slate-100;
+}

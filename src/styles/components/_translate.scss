@@ -1,0 +1,41 @@
+@use '../abstracts';
+
+.translate {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    padding: 0rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    color: abstracts.$slate-400;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    color: abstracts.$slate-600;
+    font-weight: 400;
+    font-size: 1.4rem;
+    background-color: abstracts.$slate-50;
+    border: 1px solid abstracts.$slate-400;
+    border-radius: 0.5rem;
+    resize: vertical;
+    outline: none;
+  }
+
+  textarea:focus {
+    border-color: abstracts.$stormFang;
+  }
+}

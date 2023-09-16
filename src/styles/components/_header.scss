@@ -1,0 +1,13 @@
+@use '../abstracts';
+
+.header {
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: abstracts.$slate-400;
+  }
+}

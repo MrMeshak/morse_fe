@@ -1,0 +1,14 @@
+@use '../abstracts';
+
+.translator {
+  width: 100%;
+  max-width: 80rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  @include abstracts.media-query('md') {
+    flex-direction: row;
+  }
+}

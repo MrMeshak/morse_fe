@@ -78,16 +78,16 @@ select {
   }
 }
 .translate {
-  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .translate__title {
   padding: 0rem 0rem;
   display: flex;
   justify-content: space-between;
   color: #94a3b8;
-  font-size: 1.2rem;
+  font-size: calc(1.2rem + 0.3vw);
   font-weight: 500;
 }
 .translate__title button {
@@ -99,10 +99,10 @@ select {
 }
 .translate textarea {
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   color: #475569;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: calc(1.4rem + 0.3vw);
   background-color: #f8fafc;
   border: 1px solid #94a3b8;
   border-radius: 0.5rem;
@@ -120,6 +120,60 @@ select {
 }
 .header h1 {
   font-size: 1.5rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.translator {
+  width: 100%;
+  max-width: 80rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+  .translator {
+    flex-direction: row;
+  }
+}
+
+.table-wrapper {
+  width: 100%;
+  padding: 1rem 2rem;
+  max-width: 80rem;
+}
+.table-wrapper h3 {
+  color: #64748b;
+  padding: 0.5rem 0rem;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  color: #475569;
+  font-size: calc(1rem + 0.3vw);
   font-weight: 500;
-  color: #94a3b8;
+  border-collapse: collapse;
+}
+.table thead {
+  padding: 3rem;
+}
+.table td {
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+}
+.table tr:nth-of-type(even) {
+  background-color: #e2e8f0;
+}
+.table td:nth-of-type(even) {
+  font-weight: 400;
+  font-size: calc(1.5rem + 0.3vw);
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

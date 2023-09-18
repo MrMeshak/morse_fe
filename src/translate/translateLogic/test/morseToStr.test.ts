@@ -23,9 +23,19 @@ describe('translate - strToMorse', () => {
   });
 
   describe('when input morseStr contains duplicate spaces between morseChars', () => {
-    it('it should remove duplicated spaces and return the translated str', () => {
+    it('it should remove/ignore duplicated spaces and return the translated str', () => {
       const morseStr =
         '....       .       .-..    .-..    ---    /   .--  ---  .-.   .-..   -..';
+      const expected = 'HELLO WORLD';
+
+      expect(morseToStr(morseStr)).toBe(expected);
+    });
+  });
+
+  describe('when input string contains duplicate word separators "/"', () => {
+    it('should remove/ignore duplicate word separators and return the translate str', () => {
+      const morseStr =
+        '////.... . .-.. .-.. --- //// .-- --- .-. .-.. -.. ////';
       const expected = 'HELLO WORLD';
 
       expect(morseToStr(morseStr)).toBe(expected);

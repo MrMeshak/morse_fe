@@ -11,8 +11,6 @@ export function morseToStr(str: string) {
 
   const morseWords = str.trim().match(/[^/]+/g);
 
-  console.log(morseWords);
-
   if (!morseWords) {
     return '';
   }

@@ -1,0 +1,39 @@
+@use '../abstracts';
+
+.table-wrapper {
+  width: 100%;
+  padding: 1rem 2rem;
+  max-width: 80rem;
+
+  h3 {
+    color: abstracts.$slate-500;
+    padding: 0.5rem 0rem;
+  }
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  color: abstracts.$slate-600;
+  font-size: calc(1rem + 0.3vw);
+  font-weight: 500;
+  border-collapse: collapse;
+
+  thead {
+    padding: 3rem;
+  }
+
+  td {
+    padding: 0.5rem;
+    border: 1px solid abstracts.$slate-300;
+  }
+
+  tr:nth-of-type(even) {
+    background-color: abstracts.$slate-200;
+  }
+
+  td:nth-of-type(even) {
+    font-weight: 400;
+    font-size: calc(1.5rem + 0.3vw);
+  }
+}
